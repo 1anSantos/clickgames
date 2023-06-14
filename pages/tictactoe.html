@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/tictactoe.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="circle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+            <h1>Tic Tac Toe</h1>
+        </div>
+        <nav class="nav-jogos">
+            <div class="nav-jogos-lista" style="transform: translateX(-101%)">
+                <a href="../index.html">Página Inicial</a>
+                <a href="../pages/memorygame.html">Memory Game</a>
+                <a href="../pages/simon.html">Simon</a>
+                <a href="../pages/snakegame.html">Snake Game</a>
+                <a href="../pages/termo.html">Termo</a>
+                <a href="../pages/forca.html">Forca</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="block"></div>
+    <section>
+        <div id="pop-alert">
+            <div onclick="notificacao_alert()" id="fechar-pop-alert">X</div>
+            <h2 style="margin-top: 8vh">O vencedor foi o Jogador "X"!!!</h2><br>
+            <p>A próxima rodada irá começar com o jogador
+                <select id="next-turn">
+                    <option value="O">O</option>
+                    <option value="X">X</option>
+                </select>
+            </p>
+        </div>
+        <div class="area-do-jogo">
+            <div class="stats">
+                <div class="score-box"><span>X</span>|<span id="x-score-number">—</span></div>
+                <button id="reiniciar">Reiniciar</button>
+                <div class="score-box"><span id="o-score-number">—</span>|<span>O</span></div>
+            </div>
+            <div class="tabuleiro">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <button id="zerar-placar">Zerar Placar</button>
+        </div>
+    </section>
+
+    <script src="../scripts/general.js"></script>
+    <script src="../scripts/tictactoe.js"></script>
+</body>
+</html>
