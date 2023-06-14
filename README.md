@@ -1,8 +1,10 @@
 # ClickGames
 Um site joguinhos feitos totalmente em HTML, CSS e JS. Ainda em desenvolvimento.
 
+# Link
+*gerando...*
 
-#h2 Metas:
+# Metas:
 * **Tic Tac Toe** - *Completo*
 * **Memory Game** -
 * **Simon** -
