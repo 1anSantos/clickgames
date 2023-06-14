@@ -78,7 +78,7 @@ function mostrar_ganhador(status) {
     if (status === 'empate') {
         msg = `
         <div onclick="notificacao_alert()" id="fechar-pop-alert">X</div>
-            <h2 style="margin-top: 8vh">OH NÂO!!! Deu velha😢 {empate}</h2><br>
+            <h2 style="margin-top: 8vh">OH NÃO!!! Deu velha😢 {empate}</h2><br>
             <p>A próxima rodada irá começar com o jogador
                 <select id="next-turn">
                     <option value="X">X</option>
