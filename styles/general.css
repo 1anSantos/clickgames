@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(37, 110, 245);
+}
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 8px);
+    height: 12vh;
+    background-color: blue;
+    border: 4px solid rgb(18, 3, 85);
+}
+
+h1 {
+    color: whitesmoke;
+    margin: 20px 0 20px 0;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.menu {
+    position: absolute;
+    cursor: pointer;
+    transition: background-color .3s;
+    background-color: rgba(145, 89, 248, 0.753);
+    width: 50px;
+    height: 50px;
+    left: 60px;
+    top: 6.5vh;
+    transform: translate(-50%, -50%);
+}
+.menu svg {
+    transition: fill .3s;
+    fill: #a4bce5;
+}
+.menu:hover {
+    background-color: rgba(13, 86, 221, 0.753);
+}
+.menu:hover svg{
+    fill: #5f97f7;
+}
+
+.nav-jogos-lista {
+    display: flex;
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+    transition: .3s;
+    top: 13vh;
+    left: 0;
+    width: 50vw;
+    height: 87vh;
+    background-color: rgb(18, 3, 85);
+}
+.nav-jogos-lista a {
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 15px;
+    font-size: 50px;
+    letter-spacing: 3px;
+    transition: .3s;
+    margin: 10px;
+    padding: 20px;
+    color: #095be7;
+    background-color: #200388;
+}
+.nav-jogos-lista a:hover {
+    opacity: .5;
+}
+
+.nav-jogos-lista::-webkit-scrollbar {
+    width: 35px;
+}
+.nav-jogos-lista::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 10px solid rgb(18, 3, 85);
+    background-color: #0443b1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media / Responsividade */
+@media (max-width: 750px) {
+    .nav-jogos-lista {
+        width: 100%;
+    }
+
+    .menu {
+        left: 40px;
+    }
+}

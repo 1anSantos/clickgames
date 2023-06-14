@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.jogos {
+    position: relative;
+    text-align: center;
+    font-size: 1.7vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e6eaff;
+    padding-bottom: 10px;
+    margin: 10px;
+    width: 15vw;
+    height: calc(15vw + 5vh);
+    border-radius: 1vw;
+    border: .4vw solid rgb(38, 112, 106);
+    text-shadow: 1px 3px 3px black;
+    background-color: rgb(29, 136, 127);
+}
+
+.gameIMG {
+    padding: 5px;
+    width: calc(100% - .8vw);
+    margin-bottom: 1vh;
+    border-radius: .7vw .7vw 0 0;
+    background-color: rgb(104, 230, 219);
+}
+
+@media screen and (max-width: 688px) and (max-height: 1031px)  {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .gameIMG {
+        padding: 5px;
+        width: calc(100% - 10px);
+        height: 220px;
+        margin-bottom: 10px;
+        border-radius: 13px 13px 0 0;
+    }
+
+    .jogos {
+        font-size: 35px;
+        padding-bottom: 40px;
+        margin: 20px;
+        width: 240px;
+        height: 300px;
+        border-radius: 20px;
+        border-width: 6px;
+    }
+}
