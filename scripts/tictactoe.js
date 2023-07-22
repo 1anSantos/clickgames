@@ -25,7 +25,7 @@ const movimentos_vencedores = [
     [2,5,8],
     [0,4,8],
     [2,4,6]
-]
+];
 
 
 
@@ -62,6 +62,7 @@ function notificacao_alert() {
 }
 
 function reiniciar() {
+    toggle_win_box('remove-win-box');
     boxes.forEach(box => box.innerText = '');
     jogadas_disponiveis = 9;
     play = true;
@@ -70,6 +71,18 @@ function reiniciar() {
 function atualizar_score() {
     x_score.innerText = x > 0? x: '—';
     o_score.innerText = o > 0? o: '—';
+}
+
+function toggle_win_box(value, box1, box2, box3) {
+    if (value === "add") {
+        box1.classList.add("win-box");
+        box2.classList.add("win-box");
+        box3.classList.add("win-box");
+    }
+    else {
+        const winboxes = document.querySelectorAll(".win-box");
+        winboxes.forEach(box => box.classList.toggle("win-box"));
+    }
 }
 
 function mostrar_ganhador(status) {
@@ -107,11 +120,16 @@ function mostrar_ganhador(status) {
 
 function verificar_combinacao() {
     movimentos_vencedores.forEach(movimento => {
-        const verificacao = boxes[movimento[0]].innerText === boxes[movimento[1]].innerText && boxes[movimento[1]].innerText === boxes[movimento[2]].innerText;
-        if (boxes[movimento[0]].innerText !== '' && verificacao) {
+        const box1 = boxes[movimento[0]];
+        const box2 = boxes[movimento[1]];
+        const box3 = boxes[movimento[2]];
+        const verificacao = box1.innerText === box2.innerText && box2.innerText === box3.innerText;
+
+        if (box1.innerText !== '' && verificacao) {
             play = false;
-            boxes[movimento[0]].innerText === 'X'? x++: o++;
-            mostrar_ganhador(boxes[movimento[0]].innerText);
+            box1.innerText === 'X'? x++: o++;
+            toggle_win_box('add', box1, box2, box3);
+            mostrar_ganhador(box1.innerText);
         }
         atualizar_score();
     });

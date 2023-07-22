@@ -129,6 +129,10 @@
 .box:hover {
     opacity: .5;
 }
+.win-box {
+    color: #f5f5f5;
+    background-color: rgb(37, 160, 0);
+}
 
 @media (max-width:750px) {
     .tabuleiro {
